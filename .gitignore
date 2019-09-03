@@ -1,0 +1,6 @@
+build/*
+cmake-build-release/*
+imgs/*
+!imgs/README.md
+models/*
+!models/README.md
