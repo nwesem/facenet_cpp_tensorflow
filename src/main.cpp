@@ -2,9 +2,7 @@
 #include <chrono>
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
-#include <dlib/image_processing.h>
 #include "VideoStreamer.h"
-#include "FaceExtractor.h"
 #include "FaceNet.h"
 
 // uncomment to show how much time inference needed

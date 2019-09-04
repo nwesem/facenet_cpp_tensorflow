@@ -38,7 +38,8 @@ void FaceNetClassifier::getFilePaths(std::string imagesPath, std::vector<struct 
     struct dirent *entry;
     if ((dir = opendir (imagesPath.c_str())) != NULL) {
         while ((entry = readdir (dir)) != NULL) {
-            if (entry->d_type != DT_DIR) {
+            std::string readmeCheck(entry->d_name);
+            if (entry->d_type != DT_DIR && readmeCheck != "README.md") {
                 struct Paths tempPaths;
                 tempPaths.fileName = string(entry->d_name);
                 tempPaths.absPath = imagesPath + "/" + tempPaths.fileName;
