@@ -108,6 +108,9 @@ other files. README.md will be skipped.
 ./face_recognition ../imgs/
 ```
 
+## Documentation
+Check [Doxygen documentation](./docs/html/index.html) for more info about the project.
+
 ## Stats
 Running with **~18fps** on Intel i7 7700HQ processor and NVIDIA GeForce
 GTX 1050 using OpenCV's HaarCascadeClassifier for face detection, with a
