@@ -75,7 +75,12 @@ void FaceNetClassifier::preprocessInput(std::vector<cv::Mat>& croppedFaces) {
         cv::Mat image2;
         croppedFaces[i].convertTo(image2, CV_64FC1);
         croppedFaces[i] = image2;
-        croppedFaces[i] = croppedFaces[i] - cv::Vec3d(mean_pxl, mean_pxl, mean_pxl);
+        cv::Mat mat(4, 1, CV_64FC1);
+		mat.at <double>(0, 0) = mean_pxl;
+		mat.at <double>(1, 0) = mean_pxl;
+		mat.at <double>(2, 0) = mean_pxl;
+		mat.at <double>(3, 0) = 0;
+        croppedFaces[i] = croppedFaces[i] - mat;
         croppedFaces[i] = croppedFaces[i] / stddev_pxl;
     }
 }
