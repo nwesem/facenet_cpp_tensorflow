@@ -19,7 +19,7 @@ bazel 0.18 <br>
 protobuf 3.6.0 <br>
 eigen 3.3.5 <br>
 tensorflow r1.10+ <br>
-opencv 3.4.3
+opencv 3.x or opencv 4.x
 
 ## Install dependencies
 You can use 
@@ -109,7 +109,8 @@ other files. README.md will be skipped.
 ```
 
 ## Documentation
-Check [Doxygen documentation](./docs/html/index.html) for more info about the project.
+Open Doxygen documentation (located in docs/html/index.html) with your 
+local browser for more info about the project.
 
 ## Stats
 Running with **~18fps** on Intel i7 7700HQ processor and NVIDIA GeForce
